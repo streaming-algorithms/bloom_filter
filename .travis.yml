@@ -1,3 +1,5 @@
+language: python
+
 image: python:3.6-stretch
 
 streaming_algorithms_filter:
