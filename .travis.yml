@@ -2,12 +2,12 @@ language: python
 
 image: python:3.6-stretch
 
-streaming_algorithms_filter:
+bloom_filter_filter:
  stage: test
  script:
-   - python -m venv gitlabci
-   - source gitlabci/bin/activate
+   - python -m venv ci_env
+   - source ci_env/bin/activate
    - pip install -U pip setuptools wheel
-   - pip install -e ../streaming_algorithms
-   - pip install -r ../streaming_algorithms/requirements/test.txt
-   - pytest ../streaming_algorithms/tests
+   - pip install -e ../bloom_filter
+   - pip install -r ../bloom_filter/requirements/test.txt
+   - pytest ../bloom_filter/tests
