@@ -1,16 +1,10 @@
 language: python
+python: "3.6"
 
-image: python:3.6-stretch
+install:
+  - pip install -r requirements/main.txt
+  - pip install -r requirements/test.txt
+  - pip install .
 
-bloom_filter_filter:
- stage: test
- script:
-   - python -m venv ci_env
-   - source ci_env/bin/activate
-   - pip install -U pip setuptools wheel
-   - pwd
-   - ls
-   - ls ..
-   - pip install -e ../bloom_filter
-   - pip install -r ../bloom_filter/requirements/test.txt
+script:
    - pytest ../bloom_filter/tests
