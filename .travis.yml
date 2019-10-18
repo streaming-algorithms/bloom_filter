@@ -8,6 +8,9 @@ bloom_filter_filter:
    - python -m venv ci_env
    - source ci_env/bin/activate
    - pip install -U pip setuptools wheel
+   - pwd
+   - ls
+   - ls ..
    - pip install -e ../bloom_filter
    - pip install -r ../bloom_filter/requirements/test.txt
    - pytest ../bloom_filter/tests
