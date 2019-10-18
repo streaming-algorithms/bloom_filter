@@ -30,7 +30,7 @@ The class __BloomFilter__ can be used to create bloom filters with custom bit-ar
 __m__ and number of hash functions __k__.
 
 ```python
-from bloom_filter.bloom_filter import BloomFilter
+from bloom_filter import BloomFilter
 
 bloom_filter = BloomFilter(bit_array_size=m, nb_salt=k)
 ```
@@ -40,7 +40,7 @@ and the desired memory footprint __m__ (bit-array size), the class method
 ``BloomFilter.minimal_false_positive_rate_bloom_filter``` can build an instance of
 ```BloomFilter``` with the minimal false positive rate.
 ```python
-from bloom_filter.bloom_filter import BloomFilter
+from bloom_filter import BloomFilter
 
 bloom_filter = BloomFilter.minimal_false_positive_rate_bloom_filter(
         bit_array_size=m, 
@@ -53,7 +53,7 @@ and the desired false positive rate __err__, the class method
 ```BloomFilter.minimal_memory_bloom_filter`` can build an instance of ```BloomFilter``` 
 with the minimal memory footprint that satisfies the required error rate.
 ```python
-from bloom_filter.bloom_filter import BloomFilter
+from bloom_filter import BloomFilter
 
 bloom_filter = BloomFilter.minimal_memory_bloom_filter(
         input_cardinal=n, 
