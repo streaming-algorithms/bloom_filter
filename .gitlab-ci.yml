@@ -1,0 +1,11 @@
+image: python:3.6-stretch
+
+streaming_algorithms_filter:
+ stage: test
+ script:
+   - python -m venv gitlabci
+   - source gitlabci/bin/activate
+   - pip install -U pip setuptools wheel
+   - pip install -e ../streaming_algorithms
+   - pip install -r ../streaming_algorithms/requirements/test.txt
+   - pytest ../streaming_algorithms/tests
