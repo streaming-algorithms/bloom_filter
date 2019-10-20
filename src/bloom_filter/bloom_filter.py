@@ -50,7 +50,8 @@ class BloomFilter:
             optimal_nb_salt = floor_nb_salt
             optimal_false_positive_rate = floor_false_positive_rate
 
-        logger.info(f'False positive rate: {optimal_false_positive_rate * 100}%')
+        logger.info(
+            f'False positive rate: {round(optimal_false_positive_rate, 3) * 100}%')
         return cls(bit_array_size=bit_array_size, nb_salt=optimal_nb_salt)
 
     @classmethod
