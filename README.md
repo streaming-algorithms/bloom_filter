@@ -26,6 +26,11 @@ number of distinct elements inserted in the bloom filter.
 
 
 #### Usage:
+Install the bloom filter library. Go to the bloom_filter folder and run:
+```bash
+pip install .
+```
+
 The class __BloomFilter__ can be used to create bloom filters with custom bit-array size
 __m__ and number of hash functions __k__.
 
