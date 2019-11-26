@@ -105,3 +105,7 @@ venv.bak/
 
 # ides
 .idea/*
+
+# DS_Store
+.DS_Store
+*.DS_Store
