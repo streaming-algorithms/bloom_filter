@@ -15,7 +15,7 @@ then set the __p'th__ bit of the bit-array to 1 and finally
 repeat the operations with the __k__ different hashes.
 
 Testing an element's membership to the set: compute __p__ and check that all the bits
-corresponding to all hashes are __all__ et to 1. 
+corresponding to all hashes are __all__ set to 1. 
 
 
 #### Error rate:
